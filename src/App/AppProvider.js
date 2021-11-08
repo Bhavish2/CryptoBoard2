@@ -3,7 +3,7 @@ import _ from 'lodash';
 import moment from 'moment';
 const cc = require('cryptocompare');
 
-export const AppContext = React.createContext();
+export const Appcontext = React.createContext();
 
 const MAX_FAVORITES = 10;
 const TIME_UNITS = 10;
@@ -153,9 +153,9 @@ export class AppProvider extends React.Component {
 
   render(){
     return (
-      <AppContext.Provider value={this.state}>
+      <Appcontext.Provider value={this.state}>
         {this.props.children}
-      </AppContext.Provider>
+      </Appcontext.Provider>
     )
   }
 
