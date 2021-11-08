@@ -7,6 +7,7 @@ export default function({name,children}){
      if(page!==name){
        return null;
      }
+    console.log(name);
      return <div> {children}</div>;
   }}
 
