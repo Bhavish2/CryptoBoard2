@@ -1,8 +1,8 @@
 import React from 'react';
-import {AppContext} from "../App/AppProvider";
+import {Appcontext} from "../App/AppProvider";
 
 export default function(props){
-  return <AppContext.Consumer>
+  return <Appcontext.Consumer>
   {({coinList,prices,firstVisit})=>{
     if(!coinList){
       return <div> Loading Coins </div>
@@ -14,5 +14,5 @@ export default function(props){
     return <div>{props.children}</div>
   }}
 
-  </AppContext.Consumer>
+  </Appcontext.Consumer>
 }
