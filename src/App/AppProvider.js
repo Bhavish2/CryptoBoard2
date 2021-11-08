@@ -103,7 +103,7 @@ export class AppProvider extends React.Component {
     this.setState({favorites: _.pull(favorites, key)})
   }
 
-  isInFavorites = key => _.includes(this.state.favorites, key)
+  isInFavorites = key =>{ _.includes(this.state.favorites, key)}
 
   confirmFavorites = () => {
     let currentFavorite = this.state.favorites[0];
