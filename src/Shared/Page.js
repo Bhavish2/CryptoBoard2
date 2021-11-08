@@ -5,6 +5,7 @@ export default function({name,children}){
   return <Appcontext.Consumer>
   {({page})=>{
      if(page!==name){
+       console.log(name);
        return null;
      }
     console.log(name);
