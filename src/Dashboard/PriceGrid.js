@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {AppContext} from "../App/AppProvider";
+import {Appcontext} from "../App/AppProvider";
 import PriceTile from './PriceTile';
 
 const PriceGrid = styled.div`
@@ -12,7 +12,7 @@ const PriceGrid = styled.div`
 
 export default function () {
   return (
-    <AppContext.Consumer>
+    <Appcontext.Consumer>
       {({prices}) => (
         <PriceGrid>
           {prices.map((price, index) => (
@@ -20,6 +20,6 @@ export default function () {
           ))}
         </PriceGrid>
       )}
-    </AppContext.Consumer>
+    </Appcontext.Consumer>
   );
 }
