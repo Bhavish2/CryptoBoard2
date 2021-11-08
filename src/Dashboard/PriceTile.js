@@ -3,7 +3,7 @@ import styled, {css} from 'styled-components';
 import {SelectableTile} from "../Shared/Tile";
 import {fontSize3, fontSizeBig, greenBoxShadow} from "../Shared/Styles";
 import {CoinHeaderGridStyled} from "../Settings/CoinHeaderGrid";
-import {AppContext} from "../App/AppProvider";
+import {Appcontext} from "../App/AppProvider";
 
 const JustifyRight = styled.div`
   justify-self: right; 
@@ -84,7 +84,7 @@ export default function({price, index}){
   let data = price[sym]['USD'];
   let TileClass = index < 5 ? PriceTile : PriceTileCompact;
   return (
-    <AppContext.Consumer>
+    <Appcontext.Consumer>
       {({currentFavorite, setCurrentFavorite}) =>
         <TileClass
           sym={sym}
@@ -94,6 +94,6 @@ export default function({price, index}){
         >
         </TileClass>
       }
-    </AppContext.Consumer>
+    </Appcontext.Consumer>
   )
 }
