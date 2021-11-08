@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {Tile} from "../Shared/Tile";
-import {AppContext} from "../App/AppProvider";
+import {Appcontext} from "../App/AppProvider";
 import CoinImage from '../Shared/CoinImage';
 
 const SpotlightName = styled.h2`
@@ -10,13 +10,13 @@ const SpotlightName = styled.h2`
 
 export default function (){
   return (
-    <AppContext.Consumer>
+    <Appcontext.Consumer>
       {({currentFavorite, coinList}) =>
         <Tile>
           <SpotlightName> {coinList[currentFavorite].CoinName} </SpotlightName>
           <CoinImage spotlight coin={coinList[currentFavorite]}/>
         </Tile>
       }
-    </AppContext.Consumer>
+    </Appcontext.Consumer>
   )
 }
